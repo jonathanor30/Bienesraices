@@ -1,0 +1,25 @@
+# Ignorar dependencias de Composer
+/vendor/
+
+# Ignorar dependencias de Node.js (npm / Yarn)
+/node_modules/
+
+# Ignorar archivos generados por Gulp u otras herramientas de build
+/public/
+dist/
+build/
+
+# Ignorar archivos temporales y de configuración local
+*.log
+.env
+
+# Archivos de sistema
+.DS_Store            # Solo macOS
+Thumbs.db             # Solo Windows
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
+
+# Archivos de configuración de git (si tienes configuraciones personales)
+.gitconfig
