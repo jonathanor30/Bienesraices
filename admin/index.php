@@ -64,31 +64,7 @@ incluirTemplate('header');
     <p class="alerta exito">Anuncio Eliminado correctamente</p>
 
   <?php endif; ?>
-  <div class="tabs">
-  <div class="tab-container">
-    <div id="tab3" class="tab"> 
-      <a href="#tab3">Pestaña 3</a>
-      <div class="tab-content">
-        <h2>Titulo 3</h2>
-        <p>Lorem ipsum ...</p>
-      </div>
-    </div>
-    <div id="tab2" class="tab">
-      <a href="#tab2">Pestaña 2</a>
-      <div class="tab-content">
-        <h2>Titulo 2</h2>
-        <p>Lorem ipsum ...</p>
-      </div>
-    </div> 
-    <div id="tab1" class="tab">
-      <a href="#tab1">Pestaña 1</a>
-      <div class="tab-content">
-        <h2>Titulo 1</h2>
-        <p>Lorem ipsum ...</p>
-      </div> 
-    </div> 
-  </div>
-</div>
+
 
   <a href="propiedades/crear.php" class="boton boton-verde">Nueva Propiedad</a>
   <a href="vendedores/crear.php" class="boton boton-amarillo">Nuevo Vendedor</a>
