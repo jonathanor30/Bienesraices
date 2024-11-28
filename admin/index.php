@@ -3,6 +3,7 @@
 require '../includes/app.php';
 estaAutenticado();
 
+//importar clases
 use App\Propiedad;
 use App\Vendedor;
 
@@ -11,9 +12,7 @@ $vendedorades = Propiedad::all();
 $vendedores = Vendedor::all();
 
 
-
-
-//mueestra mensaje condicional
+//muestra mensaje condicional
 $resultado = $_GET['resultado'] ?? null; // la linea final dice que si no existe asigna null
 
 // comprobancion si mandan un id para eliminar para que no marque error si no han eliminado nada ya que no existe el post antes de elimianr
@@ -53,22 +52,15 @@ incluirTemplate('header');
 
 <main class="contenedor seccion">
   <h1>Administrador de bienes raices</h1>
-  <?php if (intval($resultado) === 1): ?> <!-- inval cambia a int la variable -->
-
-    <p class="alerta exito">Anuncio creado correctamente</p>
-  <?php elseif (intval($resultado) === 2): ?>
-
-    <p class="alerta exito">Anuncio Actualizado correctamente</p>
-  <?php elseif (intval($resultado) === 3): ?>
-
-    <p class="alerta exito">Anuncio Eliminado correctamente</p>
-
-  <?php endif; ?>
-
-
+  
+  <?php 
+  $mensaje = mostrarNotificacion(intval($resultado));
+   if ($mensaje){ ?>
+  <p class="alerta exito"><?php echo s($mensaje) ?></p>
+  <?php } ?>
+  
   <a href="propiedades/crear.php" class="boton boton-verde">Nueva Propiedad</a>
   <a href="vendedores/crear.php" class="boton boton-amarillo">Nuevo Vendedor</a>
-
 
   <h2>Propiedades</h2>
   <table class="propiedades">
